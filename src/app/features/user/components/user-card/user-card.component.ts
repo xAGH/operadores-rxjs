@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { UserReq } from '../../models/user-req.model';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-user-card',
@@ -8,7 +8,7 @@ import { UserReq } from '../../models/user-req.model';
   styleUrl: './user-card.component.scss',
 })
 export class UserCardComponent {
-  @Input() user!: UserReq;
+  @Input() user!: User;
 
   get initials(): string {
     return this.user.name

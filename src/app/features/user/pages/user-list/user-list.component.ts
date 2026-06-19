@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { UserReq } from '../../models/user-req.model';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-user-list',
@@ -8,5 +8,5 @@ import { UserReq } from '../../models/user-req.model';
   styleUrl: './user-list.component.scss',
 })
 export class UserListComponent {
-  @Input() users: UserReq[] | null = [];
+  @Input() users: User[] | null = [];
 }

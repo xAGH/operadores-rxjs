@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserReq } from './features/user/models/user-req.model';
+import { Observable, of } from 'rxjs';
+import { User } from './features/user/models/user.model';
 import { UserService } from './features/user/services/user.service';
 
 @Component({
@@ -9,15 +10,11 @@ import { UserService } from './features/user/services/user.service';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  users: UserReq[] = [];
+  users$: Observable<User[]> = of([]);
 
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe({
-      next: (users) => {
-        this.users = users;
-      },
-    });
+    this.users$ = this.userService.getUsers();
   }
 }

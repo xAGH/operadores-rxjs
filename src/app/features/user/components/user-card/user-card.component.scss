@@ -1,23 +1,23 @@
 .user-card {
   background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 1rem;
+  border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
   }
 
   &__header {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 1.25rem;
   }
 
   &__avatar {
@@ -25,7 +25,7 @@
     height: 56px;
     border-radius: 50%;
     background: #2563eb;
-    color: white;
+    color: #fff;
     font-size: 1.4rem;
     font-weight: 700;
     display: grid;
@@ -33,52 +33,41 @@
     flex-shrink: 0;
   }
 
-  &__info {
-    h3 {
-      margin: 0;
-      font-size: 1.1rem;
-      color: #111827;
-    }
-
-    span {
-      color: #6b7280;
-      font-size: 0.9rem;
-    }
+  &__name {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111827;
   }
 
-  &__section {
+  &__username {
+    margin: 0.2rem 0 0;
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+
+  &__content {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-
-    h4 {
-      margin: 0;
-      font-size: 0.95rem;
-      color: #374151;
-      border-bottom: 1px solid #f3f4f6;
-      padding-bottom: 0.5rem;
-    }
+    gap: 0.9rem;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    color: #374151;
-    font-size: 0.95rem;
 
     .label {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 600;
-      color: #6b7280;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      color: #6b7280;
+    }
+
+    span:last-child {
+      color: #1f2937;
+      word-break: break-word;
     }
   }
-}
-
-.coordinates {
-  flex-direction: row;
-  gap: 1rem;
-  flex-wrap: wrap;
 }
