@@ -1,0 +1,67 @@
+<div class="user-card">
+  <div class="user-card__header">
+    <div class="user-card__avatar">
+      {{ user.name.charAt(0) }}
+    </div>
+
+    <div class="user-card__info">
+      <h3>{{ user.name }}</h3>
+      <span>{{ '@' + user.username }}</span>
+    </div>
+  </div>
+
+  <div class="user-card__section">
+    <div class="user-card__item">
+      <span class="label">Email</span>
+      <span>{{ user.email }}</span>
+    </div>
+
+    <div class="user-card__item">
+      <span class="label">Teléfono</span>
+      <span>{{ user.phone }}</span>
+    </div>
+
+    <div class="user-card__item">
+      <span class="label">Sitio web</span>
+      <span>{{ user.website }}</span>
+    </div>
+  </div>
+
+  <div class="user-card__section">
+    <h4>Dirección</h4>
+
+    <div class="user-card__item">
+      <span>
+        {{ user.address.street }},
+        {{ user.address.suite }}
+      </span>
+    </div>
+
+    <div class="user-card__item">
+      <span>
+        {{ user.address.city }} - {{ user.address.zipcode }}
+      </span>
+    </div>
+
+    <div class="user-card__item coordinates">
+      <span>Lat: {{ user.address.geo.lat }}</span>
+      <span>Lng: {{ user.address.geo.lng }}</span>
+    </div>
+  </div>
+
+  <div class="user-card__section">
+    <h4>Empresa</h4>
+
+    <div class="user-card__item">
+      <strong>{{ user.company.name }}</strong>
+    </div>
+
+    <div class="user-card__item">
+      <span>{{ user.company.catchPhrase }}</span>
+    </div>
+
+    <div class="user-card__item">
+      <small>{{ user.company.bs }}</small>
+    </div>
+  </div>
+</div>
